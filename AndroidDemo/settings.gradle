@@ -1,0 +1,8 @@
+rootProject.name = "AndroidDemo"
+include ':app'
+
+//引用 Flutter 模块
+setBinding(new Binding([gradle:this]))
+evaluate(new File('../flutter_demo/.android/include_flutter.groovy'))
+include ':flutter_demo'
+project(':flutter_demo').projectDir = new File('../flutter_demo')
